@@ -1,0 +1,8 @@
+{
+  "name": "my-node-app-41",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "cookie": "^0.4.1"
+  }
+}

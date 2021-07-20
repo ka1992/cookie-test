@@ -1,3 +1,4 @@
+//example for cookie
 var http = require('http');
 var cookie = require('cookie');
 var server = http.createServer(function(req, res){

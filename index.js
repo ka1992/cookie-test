@@ -1,10 +1,16 @@
 var http = require('http');
 var cookie = require('cookie');
 var server = http.createServer(function(req, res){
+  console.log(req.headers.cookie);
+  var cookies = {};
+  if(req.headers.cookie !== undefined){
+  cookies = cookie.parse(req.headers.cookie);
+  }
+  console.log(JSON.stringify(cookies.item1));
   res.writeHead(200, {
-    'Set-Cookie':['chco = item1', 'macchco = item2']
+    'Content-Type':'text/html;charset=utf8',
+    'Set-Cookie':['item1=choco', 'item2=cherry']
   });
-  res.writeHead(200, {"Content-Type":"text/html;charset=utf8"});
   res.write('<h1>cookie 생성</h1>');
   res.end();
 });
